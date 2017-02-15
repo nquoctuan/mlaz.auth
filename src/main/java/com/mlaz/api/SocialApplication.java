@@ -1,4 +1,4 @@
-package com.example;
+package com.mlaz.api;
 
 import java.security.Principal;
 
