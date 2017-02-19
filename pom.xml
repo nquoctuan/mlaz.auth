@@ -61,6 +61,11 @@
 			<groupId>org.webjars</groupId>
 			<artifactId>webjars-locator</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>mlaz.common</groupId>
+			<artifactId>mlaz.common</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
