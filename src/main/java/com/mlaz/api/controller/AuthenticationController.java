@@ -12,15 +12,24 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableOAuth2Sso
 @RestController
 public class AuthenticationController extends WebSecurityConfigurerAdapter {
-	@RequestMapping("/user")
-	public Principal user(Principal principal) {
-		return principal;
-	}
 
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		http.antMatcher("/**").authorizeRequests().antMatchers("/", "/login**", "/webjars/**").permitAll().anyRequest()
-				.authenticated().and().logout().logoutSuccessUrl("/").permitAll().and().csrf()
-				.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
-	}
+    @RequestMapping("/user")
+    public Principal user(Principal principal) {
+        return principal;
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.antMatcher("/**")
+                .authorizeRequests()
+                .antMatchers("/", "/login**", "/webjars/**")
+                .permitAll()
+                .anyRequest()
+                .authenticated()
+                .and().logout()
+                .logoutSuccessUrl("/")
+                .permitAll()
+                .and().csrf()
+                .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
+    }
 }
