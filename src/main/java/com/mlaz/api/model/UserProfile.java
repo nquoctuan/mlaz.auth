@@ -1,8 +1,5 @@
 package com.mlaz.api.model;
 
-/**
- * Created by magnus on 18/08/14.
- */
 public class UserProfile {
 
     private final String userId;

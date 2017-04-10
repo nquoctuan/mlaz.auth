@@ -11,9 +11,6 @@ import org.springframework.stereotype.Repository;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- * Created by magnus on 18/08/14.
- */
 @Repository
 public class DataDao {
 
@@ -26,13 +23,11 @@ public class DataDao {
         try {
             LOG.debug("SQL SELECT ON: {}", userId);
             return jdbcTemplate.queryForObject("select data from Data where userId = ?",
-                new RowMapper<String>() {
-                    public String mapRow(ResultSet rs, int rowNum) throws SQLException {
+                    (rs, rowNum) -> {
                     String data = rs.getString("data");
                     LOG.debug("SQL SELECT RETURN: {}", data);
                     return data;
-                    }
-                }, userId);
+                    }, userId);
         } catch (EmptyResultDataAccessException ex) {
             return null;
         }

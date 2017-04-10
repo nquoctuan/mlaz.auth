@@ -1,11 +1,14 @@
-spring.datasource.continueOnError=true
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.url=jdbc:h2:mem:mydb
-//spring.datasource.url=jdbc:h2:./test
+spring:
+  datasource:
+    continueOnError: true
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:mydb
 
-spring.social.facebook.appId=196631884151165
-spring.social.facebook.appSecret=038fa15520e5875f13de245bc5f5132e
-
-spring.social.google.appId=614478737-jdlvuj1esql0dpkq5hu2jss2ipbmfmdf.apps.googleusercontent.com
-spring.social.google.appSecret=KhG4x6Ko64iKMT6PJqnTapWl
+  social:
+    facebook:
+      app-id: 196631884151165
+      app-secret: 038fa15520e5875f13de245bc5f5132e
+    google:
+      app-id: 614478737-jdlvuj1esql0dpkq5hu2jss2ipbmfmdf.apps.googleusercontent.com
+      app-secret: KhG4x6Ko64iKMT6PJqnTapWl
 
