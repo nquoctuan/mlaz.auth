@@ -1,6 +1,13 @@
 server:
   port: 9000
 
+amazon:
+  dynamodb:
+    endpoint: http://localhost:8000
+  aws:
+    accesskey: ''
+    secretkey: ''
+
 spring:
   datasource:
     continueOnError: true

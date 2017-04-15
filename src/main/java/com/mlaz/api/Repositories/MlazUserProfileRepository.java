@@ -9,5 +9,6 @@ import org.springframework.data.repository.CrudRepository;
  */
 @EnableScan
 public interface MlazUserProfileRepository extends CrudRepository<MlazUserProfile, String> {
-	
+
+    MlazUserProfile findByUserId(String userId);
 }
